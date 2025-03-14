@@ -1,0 +1,303 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Background Gradient with Animation */
+/* Background Gradient with Animation */
+/* Background Gradient with Animation */
+/* Background Gradient with Animation */
+body {
+  background: linear-gradient(270deg, #1a1a2e, #16213e, #0f3460);
+  background-size: 600% 600%;
+  animation: GradientBackground 15s ease infinite;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  overflow: auto; /* Ensure the page can scroll */
+}
+
+
+
+@keyframes GradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism Container with Floating Animation */
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  text-align: center;
+  animation: Float 6s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes Float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Name & Title with Gradient Text and Glow Effect */
+#name {
+  font-size: 3.5em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  background: linear-gradient(45deg, #e94560, #ff6f61);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: Glow 2s infinite alternate;
+}
+
+@keyframes Glow {
+  0% { text-shadow: 0 0 5px #e94560, 0 0 10px #e94560, 0 0 20px #e94560; }
+  100% { text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 40px #ff6f61; }
+}
+
+#title {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #a8a8a8;
+  animation: FadeIn 2s ease-in-out;
+}
+
+#description {
+  font-size: 1.1em;
+  font-weight: 300;
+  margin-top: 10px;
+  color: #b0b0b0;
+  animation: FadeIn 2.5s ease-in-out;
+}
+
+/* Bio Text with Fade-In Animation */
+.bio {
+  font-size: 1em;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #b0b0b0;
+  animation: FadeIn 3s ease-in-out;
+}
+
+/* Competitive Programming Section with Slide-In Animation */
+#cp, #social, #contact {
+  margin-top: 30px;
+  animation: SlideIn 1s ease-in-out;
+}
+
+@keyframes SlideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Title for Sections with Gradient Hover Effect */
+#cp-title, #social-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #fff;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+#cp-title::after, #social-title::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(45deg, #e94560, #ff6f61);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+#cp-title:hover::after, #social-title:hover::after {
+  width: 100%;
+}
+
+/* Links with Hover and Gradient Background Animation */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 15px;
+  margin: 10px;
+  transition: 0.3s ease-in-out;
+  width: 80%;
+  max-width: 350px;
+  justify-content: center;
+  animation: FadeIn 3.5s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.links a:hover {
+  background: linear-gradient(45deg, #e94560, #ff6f61);
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.links a img {
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.links a i {
+  margin-right: 10px;
+}
+
+/* Contact Me Button with Gradient Pulse Animation */
+#contact {
+  margin-top: 50px;
+  animation: FadeIn 4s ease-in-out;
+}
+
+.contact-button {
+  background: linear-gradient(45deg, #e94560, #ff6f61);
+  color: white;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: GradientPulse 2s infinite;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes GradientPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Particle Background Effect */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: FloatParticle 5s infinite ease-in-out;
+}
+
+@keyframes FloatParticle {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-20px) translateX(20px); }
+}
+
+/* FadeIn Keyframes */
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* General text hover effect */
+h1:hover, h2:hover, p:hover, a:hover {
+  color: #ff9800; /* Change text color on hover */
+  text-shadow: 0 0 15px rgba(255, 152, 0, 0.7); /* Subtle glowing effect */
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.05); /* Slightly enlarge the text */
+}
+
+/* Skills Section */
+#skills-title {
+  margin-top: 30px;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  max-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.skill:hover {
+  transform: scale(1.1); /* Scale up the skill box */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover effect for all text without underline */
+h1:hover, h2:hover, p:hover, a:hover {
+  color: #ff9800;
+  text-shadow: 0 0 15px rgba(255, 152, 0, 0.7); /* Glowing effect */
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.05); /* Slightly enlarge the text */
+  text-decoration: none; /* Ensure no underline */
+}
+/* Profile Image Style */
+#profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust header to center the content */
+header {
+  text-align: center;
+}
